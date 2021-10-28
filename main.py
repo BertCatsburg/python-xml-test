@@ -3,7 +3,6 @@ import xml.sax
 import xmlutils
 
 
-
 def config(which_config):
     if which_config == "movie":
         return {
@@ -36,8 +35,6 @@ if __name__ == '__main__':
         chunkLevel=thisConfig['chunkLevel'],
         resultFunction=doThisWithTheChunk
     ))
-
-
 
     # feed the parser with small chunks to simulate
     with open(thisConfig['file'], 'r', 128) as f:  # io.DEFAULT_BUFFER_SIZE
