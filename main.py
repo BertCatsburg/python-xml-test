@@ -23,13 +23,10 @@ def config(which_config):
 
 if __name__ == '__main__':
 
-    thisConfig = config('ProductData')
+    thisConfig = config('movie')
 
     parser = xml.sax.make_parser()
     parser.setContentHandler(xmlutils.StreamHandler(
-        # rootElement='ProductData',
-        # chunkElements=['Manufacturer', 'ProductLine'],
-        # chunkLevel=2
         rootElement=thisConfig['rootElement'],
         chunkElements=thisConfig['chunkElements'],
         chunkLevel=thisConfig['chunkLevel']

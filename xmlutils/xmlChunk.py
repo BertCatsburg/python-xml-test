@@ -8,8 +8,6 @@ class XMLChunk():
         self.chunk = ''
 
     def add(self, s, a = None):
-        if a:
-            print('We should also add Attributes...')
         self.chunk += s
 
     def get(self):
