@@ -1,0 +1,54 @@
+<collection shelf="New Arrivals">
+    <movie title="Enemy Behind" subTitle="There is an Enemy Behind">
+        <type>War, Thriller</type>
+        <format>DVD</format>
+        <date>
+            <year>2003</year>
+            <month>August</month>
+            <day>12</day>
+        </date>
+        <rating>PG</rating>
+        <stars>10</stars>
+        <description>Talk about a US-Japan war</description>
+    </movie>
+    <movie title="Transformers">
+        <type>Anime, Science Fiction</type>
+        <format>DVD</format>
+        <date>
+            <year>1998</year>
+            <month>October</month>
+            <day>14</day>
+        </date>
+        <rating>R</rating>
+        <stars>8</stars>
+        <description>Based off of the comic book. Unbeknownst to other people, there is a private agency code named MiB.
+            This agency is some kind of extra terrestrial surveillance corporation. Then, one of the agency's finest men
+            only going by the name "K" (Tommy Lee Jones) , is recruiting for a new addition to the agency. He has chosen
+            James Edwards (Will Smith) of the N.Y.P.D. Then, one day, a flying saucer crashes into Earth. This was an
+            alien a part of the "Bug" race. He takes the body of a farmer (Vincent D'Onofrio) and heads to New York. He
+            is searching for a super energy source called "The Galaxy". Now, Agents J and K must stop the bug before it
+            can escape with the galaxy. —John Wiggins
+        </description>
+    </movie>
+    <movie title="Trigun">
+        <type>Anime, Action</type>
+        <format>DVD</format>
+        <episodes>4</episodes>
+        <rating>PG</rating>
+        <stars>10</stars>
+        <description>Vash the Stampede!</description>
+    </movie>
+    <radioshow>
+        <type>Comedy</type>
+        <format>MP3</format>
+        <rating>R</rating>
+        <stars>5</stars>
+    </radioshow>
+    <movie title="Ishtar">
+        <type>Comedy</type>
+        <format>VHS</format>
+        <rating>PG</rating>
+        <stars>2</stars>
+        <description>Viewable boredom</description>
+    </movie>
+</collection>
