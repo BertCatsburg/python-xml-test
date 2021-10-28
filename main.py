@@ -21,6 +21,10 @@ def config(which_config):
         }
 
 
+def doThisWithTheChunk(xmlstring=None):
+    print(f"Zork Called with {xmlstring}")
+
+
 if __name__ == '__main__':
 
     thisConfig = config('movie')
@@ -29,8 +33,10 @@ if __name__ == '__main__':
     parser.setContentHandler(xmlutils.StreamHandler(
         rootElement=thisConfig['rootElement'],
         chunkElements=thisConfig['chunkElements'],
-        chunkLevel=thisConfig['chunkLevel']
+        chunkLevel=thisConfig['chunkLevel'],
+        resultFunction=doThisWithTheChunk
     ))
+
 
 
     # feed the parser with small chunks to simulate

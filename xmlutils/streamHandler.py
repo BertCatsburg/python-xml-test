@@ -16,11 +16,15 @@ class StreamHandler(xml.sax.handler.ContentHandler):
     xmlchunk = XMLChunk()
     toxml = ToXML()
 
-    def __init__(self, rootElement, chunkElements, chunkLevel):
+    resultFunction = None
+
+    def __init__(self, rootElement, chunkElements, chunkLevel, resultFunction=None):
         super().__init__()
         self.rootElement = rootElement
         self.chunkElements = chunkElements
         self.chunkLevel = chunkLevel
+        if resultFunction:
+            self.resultFunction = resultFunction
         print(f"Starting the Class")
 
     def __element_is_a_chunk_element(self, el):
@@ -52,7 +56,7 @@ class StreamHandler(xml.sax.handler.ContentHandler):
         self.xmlchunk.add(self.toxml.endElement(name))
 
         if self.__element_is_a_chunk_element(name):
-            print(f"*** Chunk {name}, xml = {self.xmlchunk.get()}")
+            self.resultFunction(xmlstring=self.xmlchunk.get())
             self.xmlchunk.reset()
 
         self.currentLevel -= 1
