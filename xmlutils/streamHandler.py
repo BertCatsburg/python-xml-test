@@ -24,11 +24,9 @@ class StreamHandler(xml.sax.handler.ContentHandler):
         print(f"Starting the Class")
 
     def __element_is_a_chunk_element(self, el):
-        # print(f"Passed to chunktest: [{el}], level is {self.chunkLevel}")
         return any(el == x for x in self.chunkElements) and self.currentLevel == self.chunkLevel
 
     def __process_attrs(self, attrs):
-        # print(f"    Attrs len = {len(attrs)}")
         ad = {}
         for a in attrs.getNames():
             ad[a] = attrs.getValue(a)
@@ -63,9 +61,4 @@ class StreamHandler(xml.sax.handler.ContentHandler):
             raise StopIteration
 
     def characters(self, content):
-        # print(f"Content = [{content}]")
         self.xmlchunk.add(content)
-        # if self.lastEntry:
-        #     # print(f"characters, lastName = {self.lastName}")
-        #     # print(f"characters, lastEntry = {self.lastEntry}")
-        #     self.lastEntry[self.lastName]['content'] += content

@@ -10,11 +10,8 @@ class ToXML():
         aStr = ''
 
         if attributes.getLength() > 0:
-            # print(f'We have Attribute on {element}')
-
             aStr = ' '
             for a in attributes.getNames():
-                # print(f'Attribute = [{a}] with value [{attributes.getValue(a)}]')
                 aStr += f'{a}="{attributes.getValue(a)}" '
 
             aStr = ' ' + aStr.strip()
